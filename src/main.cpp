@@ -9,7 +9,7 @@ int main(int argc, char* argv[]) {
         throw std::invalid_argument("Invalid arguments. Correct format: ./evil-pipe <port>");
     }
 
-    const short port = atoi(argv[1]);
+    unsigned const short port = (atoi(argv[1]));
     std::cout << "Server running @ port " << port << std::endl;
 
     Server server(port);

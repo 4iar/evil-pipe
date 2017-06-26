@@ -5,7 +5,7 @@
 
 class Server {
 private:
-    double port;
+    unsigned short port;
     std::string pipe_payload;
     std::string non_pipe_payload;
 
@@ -14,7 +14,7 @@ private:
 public:
     void start ();
 
-    Server (double port) {
+    Server (unsigned short port) {
         this->port = port;
     };
 
