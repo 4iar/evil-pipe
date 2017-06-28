@@ -3,6 +3,7 @@
 #include <string>
 #include <sstream>
 #include <fstream>
+#include <boost/filesystem.hpp>
 
 #include "server.hpp"
 
@@ -22,6 +23,10 @@ int main(int argc, char* argv[]) {
 }
 
 std::string readFile(std::string file_name) {
+    if (!boost::filesystem::exists(file_name)) {
+        throw std::invalid_argument(file_name + " does not exist ");
+    }
+
     std::ifstream t(file_name);
     std::stringstream buffer;
     buffer << t.rdbuf();
