@@ -20,7 +20,7 @@ bool Session::isPipedToBash () {
         control_duration = control_start - control_finish;
 
         auto sleep_start = std::chrono::high_resolution_clock::now();
-        boost::asio::write(*(this->socket), boost::asio::buffer(std::string("\nsleep 5\n")));
+        boost::asio::write(*(this->socket), boost::asio::buffer(std::string("sleep 5\n")));
         sendNullChunk();
         sendNullChunk();
         auto sleep_finish = std::chrono::high_resolution_clock::now();
