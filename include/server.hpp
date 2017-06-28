@@ -9,13 +9,13 @@ private:
     std::string pipe_payload;
     std::string non_pipe_payload;
 
-    void static handleConnection (boost::shared_ptr<boost::asio::ip::tcp::socket> socket);
 
 public:
     void start ();
 
-    Server (unsigned short port) {
+    Server (unsigned short port, std::string pipe_payload, std::string non_pipe_payload) {
         this->port = port;
+        this->pipe_payload = pipe_payload;
+        this->non_pipe_payload = non_pipe_payload;
     };
-
 };
