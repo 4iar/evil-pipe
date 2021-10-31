@@ -33,4 +33,4 @@ $ ./evil-pipe <port>
 
 ## Acknowledgements
 
-Uses [Phil's passive delay method](https://www.idontplaydarts.com/2016/04/detecting-curl-pipe-bash-server-side/).
+Uses [Phil's passive delay method](https://web.archive.org/web/20170718181413/https://www.idontplaydarts.com/2016/04/detecting-curl-pipe-bash-server-side/).
